@@ -29,7 +29,7 @@ class Email
 
   def initialize(accounts)
     @accounts = accounts
-    Account.list_accounts
+    Accounts.list_accounts
   end
 
   def list_email(account)
@@ -39,7 +39,7 @@ class Email
 end
 
 if __FILE__ == $0
-  Account.new('Gmail', 'office365.outlook.com', 'zrap013', 'Jacobla88')
-  Account.new('RHUL', 'office365.outlook.com', 'zrap013', 'Jacobla88')
+  Account.new('gmail', 'office365.outlook.com', 'zrap013', 'Jacobla88')
+  Account.new('rhul', 'office365.outlook.com', 'zrap013', 'Jacobla88')
   client = Email.new(Account.accounts)
 end
